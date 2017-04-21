@@ -59,7 +59,7 @@ class ActivityController extends BaseController {
                      );
              }
         }
-        $spec_goods_price  = M('spec_goods_price')->where("goods_id = $goods_id")->getField("key,price,store_count"); // 规格 对应 价格 库存表terer
+        $spec_goods_price  = M('spec_goods_price')->where("goods_id = $goods_id")->getField("key,price,store_count"); // 规格 对应 价格 库存表terersdfasdfsadfsadfsa
         M('Goods')->where("goods_id=$goods_id")->save(array('click_count'=>$goods['click_count']+1 )); // 统计点击数
         $commentStatistics = $goodsLogic->commentStatistics($goods_id);// 获取某个商品的评论统计
         $navigate_goods = navigate_goods($goods_id,1); // 面包屑导航
